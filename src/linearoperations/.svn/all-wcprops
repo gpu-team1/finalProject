@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/linearoperations
+END
+linearoperations.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/linearoperations/linearoperations.cpp
+END
+linearoperations.cu
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/linearoperations/linearoperations.cu
+END
+linearoperations.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/linearoperations/linearoperations.h
+END
+linearoperations.cuh
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/linearoperations/linearoperations.cuh
+END

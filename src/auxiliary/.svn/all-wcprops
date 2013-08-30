@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/auxiliary
+END
+cuda_basic.cu
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/auxiliary/cuda_basic.cu
+END
+debug.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/auxiliary/debug.cpp
+END
+cuda_basic.cuh
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/auxiliary/cuda_basic.cuh
+END
+debug.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/auxiliary/debug.hpp
+END

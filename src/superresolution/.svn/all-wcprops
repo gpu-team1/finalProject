@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/superresolution
+END
+superresolution.cuh
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/superresolution/superresolution.cuh
+END
+superresolution.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/superresolution/superresolution.cpp
+END
+superresolution_definitions.h
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/superresolution/superresolution_definitions.h
+END
+superresolution.cu
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/superresolution/superresolution.cu
+END
+superresolution.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/gpucourse/!svn/ver/598/GPU_Course_WS1213/Programming/superresolution_task/src/superresolution/superresolution.hpp
+END
