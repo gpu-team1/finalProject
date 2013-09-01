@@ -39,6 +39,49 @@ public:
 	int   ny;
 };
 
+__global__ void dualTVHuberGPU
+(
+		const float *uor,
+		float       *xi1,
+		float       *xi2,
+		int         nx,
+		int         ny,
+		int			pitchf1,
+		float       factor_update,
+		float       factor_clipping,
+		float       huber_denom,
+		float       tau_d
+);
+
+__global__ void dualL1DifferenceGPU
+(
+		const float *primal,
+		const float *constant,
+		float       *dual,
+		int         nx,
+		int         ny,
+		int   		pitchf1,
+		float       factor_update,
+		float       factor_clipping,
+		float       huber_denom,
+		float       tau_d
+);
+
+__global__ void primal1NGPU
+(
+		const float *xi1,
+		const float *xi2,
+		const float *degraded,
+		float       *u,
+		float       *uor,
+		int         nx,
+		int         ny,
+		int			pitchf1,
+		float       factor_tv_update,
+		float       factor_degrade_update,
+		float       tau_p,
+		float       overrelaxation
+);
 
 void computeSuperresolutionUngerGPU
 (
