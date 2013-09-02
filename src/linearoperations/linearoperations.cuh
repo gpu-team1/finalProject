@@ -20,6 +20,38 @@
 #ifndef LINEAROPERATIONS_CUH
 #define LINEAROPERATIONS_CUH
 
+void gpu_bindConstantLinearOperationMemory
+(
+		const float *kernel,
+		int size
+);
+
+void gpu_bindLinearOperationTextureMemory
+(
+		const float *in_g,
+		int iWidth,
+		int iHeight,
+		size_t iPitchBytes
+);
+
+void gpu_unbindLinearOperationTextureMemory();
+
+
+
+__global__ void gpu_backwardRegistrationBilinearValueTex
+(
+		const float *in_g,
+		const float *flow1_g,
+		const float *flow2_g,
+		float *out_g,
+		float value,
+		int   nx,
+		int   ny,
+		int   pitchf1_in,
+		int   pitchf1_out,
+		float hx,
+		float hy
+);
 /*!
  * @brief Bilinear backward registration (warping). If the displacement
  * vector points outside the image boundaries, the pixel in the registered
@@ -52,6 +84,20 @@ void backwardRegistrationBilinearValueTex
 		float hy = 1.0f
 );
 
+__global__ void gpu_backwardRegistrationBilinearFunctionTex
+(
+		const float *in_g,
+		const float *flow1_g,
+		const float *flow2_g,
+		float *out_g,
+		const float *constant_g,
+		int   nx,
+		int   ny,
+		int   pitchf1_in,
+		int   pitchf1_out,
+		float hx,
+		float hy
+);
 /*!
  * @brief Bilinear backward registration (warping). If the displacement
  * vector points outside the image boundaries, the pixel in the registered
@@ -103,7 +149,7 @@ void backwardRegistrationBilinearFunctionTex
  * @param hx Pixel width, by which the horizontal displacement is divided
  * @param hy Pixel height, by which the vertical displacement is divided
  */
-void backwardRegistrationBilinearFunctionGlobal
+__global__ void backwardRegistrationBilinearFunctionGlobal
 (
 		const float *in_g,
 		const float *flow1_g,
@@ -118,6 +164,16 @@ void backwardRegistrationBilinearFunctionGlobal
 		float hy
 );
 
+__global__ void gpu_forewardRegistrationBilinearAtomic
+(
+		const float *flow1_g,
+		const float *flow2_g,
+		const float *in_g,
+		float       *out_g,
+		int         nx,
+		int         ny,
+		int         pitchf1
+);
 /*!
  * @brief Adjoined Version of the bilinear backward registration function
  * using atomics
@@ -138,6 +194,20 @@ void forewardRegistrationBilinearAtomic
 		int         nx,
 		int         ny,
 		int         pitchf1
+);
+
+__global__ void gaussBlurSeparateMirrorGpuKernel
+(
+		float *in_g,
+		float *out_g,
+		int   nx,
+		int   ny,
+		int   pitchf1,
+		float sigmax,
+		float sigmay,
+		int   radius,
+		float *temp_g,
+		float *mask
 );
 
 /*!
@@ -275,7 +345,7 @@ __global__ void subKernel
 __global__ void setKernel
 (
 		float *field_g,
-		int   nx,
+		intf   nx,
 		int   ny,
 		int   pitchf1,
 		float value
